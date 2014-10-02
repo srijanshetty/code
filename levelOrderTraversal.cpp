@@ -1,6 +1,7 @@
 #include "lib/tree.cpp"
 #include <queue>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -36,6 +37,7 @@ vector<vector<int> > levelOrderTraversal(TreeNode *root) {
         previousLevel = currentLevel;
     }
 
+    reverse(traversal.begin(), traversal.end());
     return traversal;
 }
 
